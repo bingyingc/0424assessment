@@ -1,0 +1,13 @@
+class solution {
+  public void rotate(int A[], int N, int k) {
+    int temp, previous;
+    for (int i = 0; i < k; i++) {
+      previous = A[N - 1];
+      for (int j = 0; j < N; j++) {
+        temp = A[j];
+        A[j] = previous;
+        previous = temp;
+      }
+    }
+  }
+}
